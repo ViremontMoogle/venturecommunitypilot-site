@@ -36,8 +36,8 @@
         <h2>Quick start for server managers</h2>
         <ol class="step-list">
           <li>
-            Run <code>/setup</code> and choose your Twitch channel and live-alert
-            destination.
+            Run <code>/setup</code> and choose your Twitch channel and
+            live-alert destination.
           </li>
           <li>
             Run <code>/testalert</code> to confirm the bot can send messages and
@@ -46,6 +46,11 @@
           <li>
             Run <code>/settings</code> and <code>/alerts status</code> to review
             the saved configuration.
+          </li>
+          <li>
+            Optional: use <code>/alertfilter role</code> to restrict who may be
+            announced, then <code>/alertroute set</code> to give matching roles
+            their own destination channel and ping.
           </li>
         </ol>
         <p class="syntax-key">
@@ -56,7 +61,9 @@
       </section>
 
       <div class="command-toolbar">
-        <label for="command-search" class="visually-hidden">Search commands</label>
+        <label for="command-search" class="visually-hidden"
+          >Search commands</label
+        >
         <input
           class="command-search"
           id="command-search"
@@ -73,16 +80,24 @@
           bot can view the channel and use slash commands.
         </p>
         <div class="command-grid">
-          <article class="card command-card" data-search="ping online status health">
+          <article
+            class="card command-card"
+            data-search="ping online status health"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/ping</span></h3>
               <span class="badge">Everyone</span>
             </div>
-            <p>Checks whether Venture CommunityPilot is online and responding.</p>
+            <p>
+              Checks whether Venture CommunityPilot is online and responding.
+            </p>
             <div class="usage">/ping</div>
           </article>
 
-          <article class="card command-card" data-search="support ko-fi donation donate tips free">
+          <article
+            class="card command-card"
+            data-search="support ko-fi donation donate tips free"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/support</span></h3>
               <span class="badge">Everyone</span>
@@ -91,14 +106,17 @@
             <div class="usage">/support</div>
           </article>
 
-          <article class="card command-card" data-search="streamstatus twitch online offline live category viewers">
+          <article
+            class="card command-card"
+            data-search="streamstatus twitch online offline live category viewers"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/streamstatus</span></h3>
               <span class="badge">Everyone</span>
             </div>
             <p>
-              Checks the server’s configured Twitch channel and reports whether
-              it is currently live.
+              Checks all Twitch channels tracked by the server and lists the
+              channels that are currently live.
             </p>
             <div class="usage">/streamstatus</div>
           </article>
@@ -110,11 +128,15 @@
         <p class="section-intro">
           These commands require Discord’s <strong>Manage Server</strong>
           permission. Their responses are generally visible only to the manager
-          who runs them, while alerts and previews appear in configured channels.
+          who runs them, while alerts and previews appear in configured
+          channels.
         </p>
 
         <div class="command-grid">
-          <article class="card command-card" data-search="setup wizard alert channel twitch username configure">
+          <article
+            class="card command-card"
+            data-search="setup wizard alert channel twitch username configure"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/setup</span></h3>
               <span class="badge admin">Manage Server</span>
@@ -126,35 +148,59 @@
             <div class="usage">/setup</div>
           </article>
 
-          <article class="card command-card" data-search="settings saved configuration twitch channel alert channel">
+          <article
+            class="card command-card"
+            data-search="settings saved configuration twitch channel alert channel filter route role"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/settings</span></h3>
               <span class="badge admin">Manage Server</span>
             </div>
-            <p>Displays the primary Twitch channel and live-alert channel saved for the server.</p>
+            <p>
+              Displays tracked Twitch channels, the default alert channel, the
+              required alert role, and configured role-based routes.
+            </p>
             <div class="usage">/settings</div>
           </article>
 
-          <article class="card command-card" data-search="alerts customize message color role filter games title keywords delivery end crosspost status reset variables streamer url game title viewers">
+          <article
+            class="card command-card"
+            data-search="alerts customize message color role filter games title keywords delivery end crosspost status reset variables streamer url game title viewers"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/alerts</span></h3>
               <span class="badge admin">Manage Server</span>
             </div>
-            <p>Customizes the appearance, targeting, and lifecycle of Twitch live alerts.</p>
+            <p>
+              Customizes the appearance, targeting, and lifecycle of Twitch live
+              alerts.
+            </p>
             <ul class="subcommands">
               <li>
-                <strong><code>/alerts customize [message] [color] [role]</code></strong>
+                <strong
+                  ><code
+                    >/alerts customize [message] [color] [role]</code
+                  ></strong
+                >
                 Set a message template, a hex embed color such as
                 <code>#9146FF</code>, and an optional role mention. Message
-                templates can use <code>{streamer}</code> and <code>{url}</code>.
+                templates can use <code>{streamer}</code> and
+                <code>{url}</code>.
               </li>
               <li>
-                <strong><code>/alerts filters [games] [title_keywords]</code></strong>
+                <strong
+                  ><code>/alerts filters [games] [title_keywords]</code></strong
+                >
                 Allow alerts only for comma-separated game names and/or stream
                 titles containing at least one comma-separated keyword.
               </li>
               <li>
-                <strong><code>/alerts delivery [stream_end_action] [end_message] [auto_crosspost]</code></strong>
+                <strong
+                  ><code
+                    >/alerts delivery [stream_end_action] [end_message]
+                    [auto_crosspost]</code
+                  ></strong
+                >
                 Keep, edit, or delete the original alert when a stream ends, or
                 send a separate end message. Auto-crosspost publishes alerts in
                 Discord announcement channels.
@@ -166,17 +212,23 @@
               </li>
               <li>
                 <strong><code>/alerts reset</code></strong>
-                Restore the default alert customization, filters, and delivery settings.
+                Restore the default alert customization, filters, and delivery
+                settings.
               </li>
             </ul>
           </article>
 
-          <article class="card command-card" data-search="streamer add remove list link unlink twitch username member discord 500 track">
+          <article
+            class="card command-card"
+            data-search="streamer add remove list link unlink offline action twitch username member discord 500 track keep edit delete message default"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/streamer</span></h3>
               <span class="badge admin">Manage Server</span>
             </div>
-            <p>Manages the individual Twitch channels monitored by this server.</p>
+            <p>
+              Manages the individual Twitch channels monitored by this server.
+            </p>
             <ul class="subcommands">
               <li>
                 <strong><code>/streamer add &lt;username&gt;</code></strong>
@@ -192,7 +244,11 @@
                 List the Twitch channels currently tracked by the server.
               </li>
               <li>
-                <strong><code>/streamer link &lt;username&gt; &lt;member&gt;</code></strong>
+                <strong
+                  ><code
+                    >/streamer link &lt;username&gt; &lt;member&gt;</code
+                  ></strong
+                >
                 Connect a tracked Twitch username to its Discord member so Live
                 Role automation can identify the correct person.
               </li>
@@ -201,55 +257,163 @@
                 Remove the Discord-member association without necessarily
                 removing the Twitch channel from monitoring.
               </li>
+              <li>
+                <strong
+                  ><code
+                    >/streamer offline-action &lt;username&gt;
+                    &lt;action&gt;</code
+                  ></strong
+                >
+                Set an individual stream-end action for this creator. Choose the
+                server default, keep the alert, edit it, delete it, or send a
+                separate stream-ended message. The individual setting overrides
+                <code>/alerts delivery</code> only for that streamer.
+              </li>
             </ul>
           </article>
 
-          <article class="card command-card" data-search="streamteam twitch team setup url role channel add member remove status test disable shoutout official sync">
+          <article
+            class="card command-card"
+            data-search="alertfilter role eligibility required subscriber clear status linked member restrict shoutout"
+          >
+            <div class="command-heading">
+              <h3><span class="command-name">/alertfilter</span></h3>
+              <span class="badge admin">Manage Server</span>
+            </div>
+            <p>
+              Restricts live alerts to linked Discord members who have one
+              required role. This filter fails closed: an unlinked member, a
+              missing role, or a role mismatch prevents the alert.
+            </p>
+            <ul class="subcommands">
+              <li>
+                <strong><code>/alertfilter role &lt;role&gt;</code></strong>
+                Require linked streamers to have the selected Discord role
+                before any live alert can be sent.
+              </li>
+              <li>
+                <strong><code>/alertfilter status</code></strong>
+                Show the role currently required for live alerts.
+              </li>
+              <li>
+                <strong><code>/alertfilter clear</code></strong>
+                Remove the eligibility restriction and resume normal alerts.
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="card command-card"
+            data-search="alertroute set remove list role channel ping subscriber separate destination priority highest linked member"
+          >
+            <div class="command-heading">
+              <h3><span class="command-name">/alertroute</span></h3>
+              <span class="badge admin">Manage Server</span>
+            </div>
+            <p>
+              Sends alerts to different channels and ping roles according to the
+              linked streamer’s Discord roles. If several routes match, the
+              member’s highest matching Discord role takes priority.
+            </p>
+            <ul class="subcommands">
+              <li>
+                <strong
+                  ><code
+                    >/alertroute set &lt;streamer_role&gt; &lt;channel&gt;
+                    [ping_role]</code
+                  ></strong
+                >
+                Create or update a route. The streamer role selects the route;
+                the optional ping role is the audience mentioned by the alert.
+              </li>
+              <li>
+                <strong
+                  ><code>/alertroute remove &lt;streamer_role&gt;</code></strong
+                >
+                Delete the route associated with the selected streamer role.
+              </li>
+              <li>
+                <strong><code>/alertroute list</code></strong>
+                List every role-to-channel route and its configured ping.
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="card command-card"
+            data-search="streamteam twitch team setup url role channel add member remove status test disable shoutout official sync"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/streamteam</span></h3>
               <span class="badge admin">Manage Server</span>
             </div>
-            <p>Configures automatic shoutouts for an official Twitch Team or individually selected creators.</p>
+            <p>
+              Configures automatic shoutouts for an official Twitch Team or
+              individually selected creators.
+            </p>
             <ul class="subcommands">
               <li>
-                <strong><code>/streamteam setup [team_url] [role] [channel]</code></strong>
+                <strong
+                  ><code
+                    >/streamteam setup [team_url] [role] [channel]</code
+                  ></strong
+                >
                 Save an official Twitch Team URL or team name, an optional role,
                 and an optional text or announcement channel for shoutouts.
               </li>
               <li>
-                <strong><code>/streamteam add-member &lt;username&gt; [member]</code></strong>
-                Add an individual team creator and optionally associate a Discord member.
+                <strong
+                  ><code
+                    >/streamteam add-member &lt;username&gt; [member]</code
+                  ></strong
+                >
+                Add an individual team creator and optionally associate a
+                Discord member.
               </li>
               <li>
-                <strong><code>/streamteam remove-member &lt;username&gt;</code></strong>
+                <strong
+                  ><code
+                    >/streamteam remove-member &lt;username&gt;</code
+                  ></strong
+                >
                 Remove an individually added team creator.
               </li>
               <li>
                 <strong><code>/streamteam status</code></strong>
-                Review the official team, role, shoutout channel, and tracked membership.
+                Review the official team, role, shoutout channel, and tracked
+                membership.
               </li>
               <li>
                 <strong><code>/streamteam test</code></strong>
-                Send a safe Stream Team shoutout preview to verify the design and destination.
+                Send a safe Stream Team shoutout preview to verify the design
+                and destination.
               </li>
               <li>
                 <strong><code>/streamteam disable-team</code></strong>
-                Stop official Twitch Team syncing while preserving separately configured members where applicable.
+                Stop official Twitch Team syncing while preserving separately
+                configured members where applicable.
               </li>
             </ul>
           </article>
 
-          <article class="card command-card" data-search="liverole live role setup status disable assign remove hierarchy manage roles">
+          <article
+            class="card command-card"
+            data-search="liverole live role setup status disable assign remove hierarchy manage roles"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/liverole</span></h3>
               <span class="badge admin">Manage Server</span>
             </div>
-            <p>Controls the Discord role assigned to linked members while their Twitch channels are live.</p>
+            <p>
+              Controls the Discord role assigned to linked members while their
+              Twitch channels are live.
+            </p>
             <ul class="subcommands">
               <li>
                 <strong><code>/liverole setup &lt;role&gt;</code></strong>
                 Select the Live Role. The Venture CommunityPilot bot role must
-                be above the selected role and have <strong>Manage Roles</strong>.
+                be above the selected role and have
+                <strong>Manage Roles</strong>.
               </li>
               <li>
                 <strong><code>/liverole status</code></strong>
@@ -262,16 +426,25 @@
             </ul>
           </article>
 
-          <article class="card command-card" data-search="testalert preview live alert test setup">
+          <article
+            class="card command-card"
+            data-search="testalert preview live alert test setup"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/testalert</span></h3>
               <span class="badge admin">Manage Server</span>
             </div>
-            <p>Sends a preview of the automatic live announcement to the configured alert channel.</p>
+            <p>
+              Sends a preview of the automatic live announcement to the
+              configured alert channel.
+            </p>
             <div class="usage">/testalert</div>
           </article>
 
-          <article class="card command-card" data-search="testend stream end preview edit delete message keep">
+          <article
+            class="card command-card"
+            data-search="testend stream end preview edit delete message keep"
+          >
             <div class="command-heading">
               <h3><span class="command-name">/testend</span></h3>
               <span class="badge admin">Manage Server</span>
@@ -296,9 +469,13 @@
           <div>
             <h3>Alerts are not appearing</h3>
             <p>
-              Run <code>/settings</code>, then <code>/testalert</code>. Confirm the
-              bot can view the alert channel, send messages, and embed links.
-              Review filters with <code>/alerts status</code>.
+              Run <code>/settings</code>, then <code>/testalert</code>. Confirm
+              the bot can view the alert channel, send messages, and embed
+              links. Review content filters with <code>/alerts status</code>,
+              the eligibility role with <code>/alertfilter status</code>, and
+              role destinations with <code>/alertroute list</code>. Streamers
+              must be linked with <code>/streamer link</code> when role
+              filtering or routing is enabled.
             </p>
           </div>
           <div>
@@ -320,7 +497,9 @@
             <h3>Need direct help?</h3>
             <p>
               Email
-              <a href="mailto:viremontmoogle@gmail.com">viremontmoogle@gmail.com</a>
+              <a href="mailto:viremontmoogle@gmail.com"
+                >viremontmoogle@gmail.com</a
+              >
               and include the server ID, command name, and error message. Never
               send a Discord bot token or other secret.
             </p>
@@ -340,16 +519,17 @@
     </footer>
 
     <script>
-      const searchInput = document.querySelector('#command-search');
-      const commandCards = [...document.querySelectorAll('.command-card')];
-      const emptyState = document.querySelector('#empty-state');
+      const searchInput = document.querySelector("#command-search");
+      const commandCards = [...document.querySelectorAll(".command-card")];
+      const emptyState = document.querySelector("#empty-state");
 
-      searchInput.addEventListener('input', () => {
+      searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         let visibleCount = 0;
 
         commandCards.forEach((card) => {
-          const haystack = `${card.dataset.search} ${card.textContent}`.toLowerCase();
+          const haystack =
+            `${card.dataset.search} ${card.textContent}`.toLowerCase();
           const matches = !query || haystack.includes(query);
           card.hidden = !matches;
           if (matches) visibleCount += 1;

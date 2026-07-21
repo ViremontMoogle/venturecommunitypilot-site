@@ -165,7 +165,7 @@
 
           <article
             class="card command-card"
-            data-search="alerts customize message color role filter games title keywords delivery end crosspost status reset variables streamer url game title viewers"
+            data-search="alerts customize message color role filter games title keywords delivery end crosspost everyone ping notify status reset variables streamer url game title viewers"
           >
             <div class="command-heading">
               <h3><span class="command-name">/alerts</span></h3>
@@ -206,14 +206,24 @@
                 Discord announcement channels.
               </li>
               <li>
+                <strong
+                  ><code>/alerts everyone-ping &lt;enabled&gt;</code></strong
+                >
+                Enable or disable an <code>@everyone</code> mention on live
+                alerts. This setting defaults to disabled. The bot must have
+                Discord’s <strong>Mention @everyone, @here, and All
+                Roles</strong> permission in the destination channel.
+              </li>
+              <li>
                 <strong><code>/alerts status</code></strong>
                 Review the current message, color, role, filters, stream-end
-                action, and crosspost setting.
+                action, crosspost setting, and <code>@everyone</code> ping
+                status.
               </li>
               <li>
                 <strong><code>/alerts reset</code></strong>
                 Restore the default alert customization, filters, and delivery
-                settings.
+                settings, including disabling <code>@everyone</code> pings.
               </li>
             </ul>
           </article>
@@ -484,6 +494,16 @@
               Run <code>/liverole status</code> and confirm the Twitch username
               is linked with <code>/streamer link</code>. Place the bot’s role
               above the Live Role in Discord’s role hierarchy.
+            </p>
+          </div>
+          <div>
+            <h3><code>@everyone</code> is not notifying members</h3>
+            <p>
+              Run <code>/alerts status</code> and confirm the ping is enabled.
+              Then allow <strong>Mention @everyone, @here, and All
+              Roles</strong> for the bot in the destination channel. Individual
+              members can still suppress <code>@everyone</code> notifications
+              in their personal Discord settings.
             </p>
           </div>
           <div>

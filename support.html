@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Command guide and support for Venture CommunityPilot."
+      content="Complete Venture CommunityPilot v1.2 command guide for Twitch, Kick, YouTube, TikTok, tickets, alerts, roles, and streamer-community setup."
     />
-    <title>Commands &amp; Support | Venture CommunityPilot</title>
+    <meta name="theme-color" content="#091426" />
+    <title>V1.2 Commands &amp; Support | Venture CommunityPilot</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -24,33 +25,45 @@
 
     <main>
       <section class="support-hero">
-        <p class="eyebrow">Commands &amp; support</p>
+        <p class="eyebrow">V1.2 commands &amp; support</p>
         <h1>Your CommunityPilot field guide.</h1>
         <p>
           Find every available slash command, see who can use it, and follow
-          practical examples for setting up your streamer community.
+          practical examples for managing Twitch, Kick, YouTube, and TikTok
+          creators in one Discord community.
         </p>
       </section>
+
+      <aside class="feature-notice" aria-labelledby="multiplatform-feature-title">
+        <span class="feature-notice-label">Version 1.2</span>
+        <div>
+          <h2 id="multiplatform-feature-title">Multi-platform alerts are here</h2>
+          <p>
+            Add Kick LIVE, YouTube LIVE or upload, and TikTok timed-LIVE alerts
+            with <code>/platform add</code>. Existing Twitch alerts, Stream
+            Teams, Live Roles, role routing, and private tickets remain intact.
+          </p>
+        </div>
+      </aside>
 
       <section class="card quick-start">
         <h2>Quick start for server managers</h2>
         <ol class="step-list">
           <li>
             Run <code>/setup</code> and choose your Twitch channel and
-            live-alert destination.
+            default live-alert destination.
           </li>
           <li>
-            Run <code>/testalert</code> to confirm the bot can send messages and
-            embeds to the selected channel.
+            Use <code>/platform add</code> to configure each Kick, YouTube, or
+            TikTok creator, destination channel, and optional ping role.
           </li>
           <li>
-            Run <code>/settings</code> and <code>/alerts status</code> to review
-            the saved configuration.
+            Run <code>/testalert</code> for Twitch and
+            <code>/platform test</code> for other platforms to verify delivery.
           </li>
           <li>
-            Optional: use <code>/alertfilter role</code> to restrict who may be
-            announced, then <code>/alertroute set</code> to give matching roles
-            their own destination channel and ping.
+            Review saved settings with <code>/settings</code>,
+            <code>/platform list</code>, and <code>/alerts status</code>.
           </li>
         </ol>
         <p class="syntax-key">
@@ -211,11 +224,100 @@
                 action, and crosspost setting.
               </li>
               <li>
+                <strong><code>/alerts everyone-ping &lt;enabled&gt;</code></strong>
+                Enable or disable an <code>@everyone</code> mention on Twitch
+                live alerts. Discord channel permissions must also allow the
+                bot to mention everyone.
+              </li>
+              <li>
                 <strong><code>/alerts reset</code></strong>
                 Restore the default alert customization, filters, and delivery
                 settings.
               </li>
             </ul>
+          </article>
+
+          <article
+            class="card command-card"
+            data-search="platform multi-platform kick youtube tiktok creator add remove list test live upload video channel ping role"
+          >
+            <div class="command-heading">
+              <h3><span class="command-name">/platform</span></h3>
+              <span class="badge admin">Manage Server</span>
+            </div>
+            <p>
+              Manages creator alerts for Kick, YouTube, and TikTok. Each saved
+              creator may use a dedicated Discord channel and optional role
+              ping.
+            </p>
+            <ul class="subcommands">
+              <li>
+                <strong
+                  ><code
+                    >/platform add &lt;platform&gt; &lt;creator&gt; [alert_type]
+                    [channel] [ping_role]</code
+                  ></strong
+                >
+                Add or update a creator. Kick uses automatic LIVE alerts.
+                YouTube can announce LIVE streams, uploads, or both. TikTok is
+                configured here, then announced with <code>/golive</code>.
+              </li>
+              <li>
+                <strong
+                  ><code
+                    >/platform remove &lt;platform&gt; &lt;creator&gt;</code
+                  ></strong
+                >
+                Remove the saved creator alert for the selected platform.
+              </li>
+              <li>
+                <strong><code>/platform list</code></strong>
+                List all configured Kick, YouTube, and TikTok creator alerts,
+                alert types, destinations, and pings.
+              </li>
+              <li>
+                <strong
+                  ><code
+                    >/platform test &lt;platform&gt; &lt;creator&gt;</code
+                  ></strong
+                >
+                Send a preview using the creator's saved destination and role
+                mention.
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="card command-card"
+            data-search="golive tiktok timed manual live alert duration expiry"
+          >
+            <div class="command-heading">
+              <h3><span class="command-name">/golive</span></h3>
+              <span class="badge admin">Manage Server</span>
+            </div>
+            <p>
+              Sends a timed manual LIVE announcement for a TikTok creator
+              previously saved with <code>/platform add</code>.
+            </p>
+            <div class="usage">/golive &lt;creator&gt; [duration]</div>
+            <p>
+              Duration is in minutes, from 15 to 1,440. If omitted, the alert
+              expires after 240 minutes.
+            </p>
+          </article>
+
+          <article
+            class="card command-card"
+            data-search="endstream tiktok manual live alert end stop expire"
+          >
+            <div class="command-heading">
+              <h3><span class="command-name">/endstream</span></h3>
+              <span class="badge admin">Manage Server</span>
+            </div>
+            <p>
+              Ends an active manual TikTok LIVE alert before its timer expires.
+            </p>
+            <div class="usage">/endstream &lt;creator&gt;</div>
           </article>
 
           <article
@@ -428,6 +530,43 @@
 
           <article
             class="card command-card"
+            data-search="ticket tickets support private channel panel category staff role setup status disable claim close reopen delete"
+          >
+            <div class="command-heading">
+              <h3><span class="command-name">/ticket</span></h3>
+              <span class="badge admin">Manage Server</span>
+            </div>
+            <p>
+              Configures a private support-ticket system with an Open Ticket
+              panel and staff controls for claiming, closing, reopening, and
+              deleting tickets.
+            </p>
+            <ul class="subcommands">
+              <li>
+                <strong
+                  ><code
+                    >/ticket setup &lt;panel_channel&gt; &lt;category&gt;
+                    &lt;staff_role&gt;</code
+                  ></strong
+                >
+                Post the ticket panel and choose where private ticket channels
+                are created and which staff role can access them.
+              </li>
+              <li>
+                <strong><code>/ticket status</code></strong>
+                Display the current panel channel, ticket category, staff role,
+                system status, and number of open tickets.
+              </li>
+              <li>
+                <strong><code>/ticket disable</code></strong>
+                Stop members from opening new tickets without deleting any
+                existing ticket channels.
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="card command-card"
             data-search="testalert preview live alert test setup"
           >
             <div class="command-heading">
@@ -460,7 +599,7 @@
 
       <p class="card empty-state" id="empty-state" hidden>
         No commands matched that search. Try a command name such as
-        <code>streamer</code>, <code>alerts</code>, or <code>liverole</code>.
+        <code>platform</code>, <code>streamer</code>, or <code>ticket</code>.
       </p>
 
       <section class="card help-panel">
@@ -471,7 +610,9 @@
             <p>
               Run <code>/settings</code>, then <code>/testalert</code>. Confirm
               the bot can view the alert channel, send messages, and embed
-              links. Review content filters with <code>/alerts status</code>,
+              links. For Kick, YouTube, or TikTok, use
+              <code>/platform list</code> and <code>/platform test</code>.
+              Review Twitch content filters with <code>/alerts status</code>,
               the eligibility role with <code>/alertfilter status</code>, and
               role destinations with <code>/alertroute list</code>. Streamers
               must be linked with <code>/streamer link</code> when role
@@ -496,7 +637,8 @@
           <div>
             <h3>Need direct help?</h3>
             <p>
-              Email
+              Join the
+              <a href="https://discord.gg/AfpDvehFv6">support server</a> or email
               <a href="mailto:viremontmoogle@gmail.com"
                 >viremontmoogle@gmail.com</a
               >
@@ -509,13 +651,15 @@
     </main>
 
     <footer>
-      <p>Operated by Viremont Ventures.</p>
+      <p>Venture CommunityPilot v1.2 • Operated by Viremont Ventures.</p>
       <p>
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
+        <a href="https://discord.gg/AfpDvehFv6">Support Server</a>
         <a href="https://ko-fi.com/venturecp">Ko-fi</a>
       </p>
+      <p>Not affiliated with Discord, Twitch, Kick, YouTube, or TikTok.</p>
     </footer>
 
     <script>

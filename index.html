@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Venture CommunityPilot is a free Discord community bot for Twitch streamers and their communities."
+      content="Venture CommunityPilot v1.2 is a 100% free Discord bot for Twitch, Kick, YouTube, and TikTok creator communities, with live alerts, YouTube upload alerts, tickets, roles, and routing."
     />
-    <title>Venture CommunityPilot</title>
+    <meta property="og:title" content="Venture CommunityPilot v1.2" />
+    <meta
+      property="og:description"
+      content="Free multi-platform creator alerts and community tools for Twitch, Kick, YouTube, and TikTok."
+    />
+    <meta property="og:image" content="bot-icon.png" />
+    <meta name="theme-color" content="#091426" />
+    <title>Venture CommunityPilot v1.2 | Free Multi-Platform Discord Bot</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -26,19 +33,27 @@
     <main>
       <section class="hero">
         <div>
-          <p class="eyebrow">Built for streamer communities</p>
-          <h1>Community guidance, always free.</h1>
+          <p class="eyebrow">V1.2 • Twitch • Kick • YouTube • TikTok</p>
+          <h1>One community. Every platform.</h1>
           <p class="hero-copy">
-            Venture CommunityPilot helps Discord communities follow Twitch
-            creators, publish rich live alerts, coordinate Stream Teams, and
-            celebrate every stream—all without locking features behind a
-            premium tier.
+            Venture CommunityPilot brings Twitch, Kick, YouTube, and TikTok
+            creators together in Discord. Publish rich LIVE alerts, announce
+            new YouTube uploads, route notifications by creator, run private
+            support tickets, and grow your community—with every feature free.
           </p>
+          <div class="platform-list" aria-label="Supported platforms">
+            <span>Twitch</span>
+            <span>Kick</span>
+            <span>YouTube</span>
+            <span>TikTok</span>
+          </div>
           <div class="actions">
             <a
               class="button primary"
               href="https://discord.com/oauth2/authorize?client_id=1528395229957460070&amp;permissions=268520448&amp;integration_type=0&amp;scope=bot+applications.commands"
             >Add to Discord</a>
+            <a class="button" href="support.html">View Commands</a>
+            <a class="button" href="https://discord.gg/AfpDvehFv6">Join Support Server</a>
             <a class="button" href="https://ko-fi.com/venturecp">Support on Ko-fi</a>
           </div>
         </div>
@@ -53,33 +68,42 @@
       </section>
 
       <section class="section" id="features">
-        <p class="eyebrow">Free features</p>
-        <h2>A capable co-pilot for your server.</h2>
+        <p class="eyebrow">Version 1.2 • Every feature stays free</p>
+        <h2>Your multi-platform community co-pilot.</h2>
         <div class="feature-grid">
           <article class="card">
-            <h3>Automatic live alerts</h3>
-            <p>Rich Twitch announcements, configurable channels, filters, colors, and messages.</p>
+            <h3>Twitch &amp; Kick LIVE</h3>
+            <p>Automatic LIVE detection and rich Discord announcements for configured Twitch and Kick creators.</p>
           </article>
           <article class="card">
-            <h3>Up to 500 channels</h3>
-            <p>Track individual creators and official or manually managed Twitch Stream Teams.</p>
+            <h3>YouTube LIVE &amp; uploads</h3>
+            <p>Announce YouTube livestreams, newly published videos, or both for each configured channel.</p>
           </article>
           <article class="card">
-            <h3>Live Roles</h3>
-            <p>Automatically identify linked Discord members while their Twitch channels are live.</p>
+            <h3>TikTok LIVE alerts</h3>
+            <p>Send timed manual TikTok LIVE announcements with safe automatic expiry and an early end command.</p>
           </article>
           <article class="card">
-            <h3>Stream-end actions</h3>
-            <p>Keep, edit, delete, or follow up on an announcement after a stream ends.</p>
+            <h3>Creator-level routing</h3>
+            <p>Choose a destination channel and optional role ping for every Kick, YouTube, or TikTok creator.</p>
           </article>
           <article class="card">
-            <h3>Community-first</h3>
-            <p>No premium feature wall. The service is sustained by optional tips and donations.</p>
+            <h3>Twitch power tools</h3>
+            <p>Use Stream Teams, Live Roles, filters, role routes, custom messages, and configurable stream-end actions.</p>
           </article>
           <article class="card">
-            <h3>Administrator controls</h3>
-            <p>Server managers control tracked accounts, roles, channels, alerts, and filters.</p>
+            <h3>Tickets without a paywall</h3>
+            <p>Open private support channels with claim, close, reopen, and delete controls—100% free.</p>
           </article>
+        </div>
+        <div class="free-promise card">
+          <p class="eyebrow">The free promise</p>
+          <h3>Powerful features should not require a premium tier.</h3>
+          <p>
+            Venture CommunityPilot is a 100% free, non-restrictive Discord bot
+            for streamer communities. Optional Ko-fi tips help cover hosting
+            and continued development; no feature is locked behind payment.
+          </p>
         </div>
       </section>
     </main>
@@ -88,11 +112,13 @@
       <p>Operated by Viremont Ventures.</p>
       <p>
         <a href="support.html">Command Guide</a>
+        <a href="https://discord.gg/AfpDvehFv6">Support Server</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="mailto:viremontmoogle@gmail.com">Contact</a>
       </p>
-      <p>Venture CommunityPilot is not affiliated with Discord or Twitch.</p>
+      <p><strong>Venture CommunityPilot v1.2</strong></p>
+      <p>Venture CommunityPilot is not affiliated with Discord, Twitch, Kick, YouTube, or TikTok.</p>
     </footer>
   </body>
 </html>

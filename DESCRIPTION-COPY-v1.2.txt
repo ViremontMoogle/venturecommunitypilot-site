@@ -1,0 +1,53 @@
+VENTURE COMMUNITYPILOT v1.2 — OFFICIAL DESCRIPTION COPY
+========================================================
+
+Use these approved descriptions wherever Venture CommunityPilot appears.
+
+SHORT TAGLINE
+-------------
+Free multi-platform creator alerts and community tools for Twitch, Kick, YouTube, and TikTok.
+
+COMPACT DESCRIPTION
+-------------------
+Venture CommunityPilot v1.2 is a 100% free Discord bot for streamer communities, with Twitch and Kick LIVE alerts, YouTube LIVE and upload alerts, timed TikTok LIVE announcements, private tickets, Live Roles, filters, and role-based routing.
+
+FULL DESCRIPTION
+----------------
+Venture CommunityPilot v1.2 is a 100% free, non-restrictive Discord bot built for multi-platform streamer communities. Automatically announce Twitch and Kick livestreams, YouTube livestreams and new video uploads, and send timed manual TikTok LIVE alerts. Server managers can customize channels and role pings per creator while also using Twitch Stream Teams, Live Roles, alert filters, role-based routes, private support tickets, and configurable stream-end actions. No feature is locked behind a premium tier; optional Ko-fi tips help cover hosting and continued development.
+
+DISCORD APP DIRECTORY / DISCOVERY SUMMARY
+-----------------------------------------
+Bring Twitch, Kick, YouTube, and TikTok creators together in Discord with free LIVE alerts, YouTube upload announcements, creator-level channels and pings, Twitch Stream Teams, Live Roles, role routing, filters, tickets, and more. Venture CommunityPilot is 100% free, with no premium feature wall.
+
+DISCORD BOT PROFILE “ABOUT ME”
+------------------------------
+Free multi-platform alerts and community tools for Twitch, Kick, YouTube & TikTok. No premium feature wall. Use /support for help.
+
+GITHUB REPOSITORY DESCRIPTION
+-----------------------------
+Free Discord community bot with Twitch and Kick LIVE alerts, YouTube LIVE/upload alerts, timed TikTok alerts, tickets, Live Roles, filters, and role routing.
+
+SUPPORT SERVER INTRODUCTION
+---------------------------
+Welcome to the official Venture CommunityPilot support community. Version 1.2 connects Twitch, Kick, YouTube, and TikTok creators with powerful Discord alerts and community tools—all 100% free. Find setup guides, command help, troubleshooting, updates, and a place to share suggestions.
+
+SOCIAL / ANNOUNCEMENT COPY
+--------------------------
+Venture CommunityPilot v1.2 is live! Bring Twitch, Kick, YouTube, and TikTok creators together with multi-platform alerts, YouTube upload announcements, creator-level channels and pings, Twitch power tools, and private tickets—all 100% free with no premium feature wall.
+
+TWITCH CHAT MESSAGE
+-------------------
+Looking for a free Discord bot for your streamer community? Venture CommunityPilot v1.2 supports Twitch, Kick, YouTube & TikTok alerts, YouTube uploads, tickets, roles and more—no premium feature wall: https://viremontmoogle.github.io/venturecommunitypilot-site/
+
+OFFICIAL LINKS
+--------------
+Website: https://viremontmoogle.github.io/venturecommunitypilot-site/
+Command guide: https://viremontmoogle.github.io/venturecommunitypilot-site/support.html
+Support server: https://discord.gg/AfpDvehFv6
+Ko-fi: https://ko-fi.com/venturecp
+Support email: viremontmoogle@gmail.com
+Discord application ID: 1528395229957460070
+
+PLATFORM ACCURACY NOTE
+----------------------
+Twitch and Kick LIVE alerts are automatic. YouTube LIVE and new-video alerts are automatic. TikTok LIVE alerts are started manually with /golive and expire automatically after the configured duration, or can be ended early with /endstream.

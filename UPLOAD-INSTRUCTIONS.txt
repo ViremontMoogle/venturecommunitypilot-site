@@ -1,0 +1,30 @@
+VENTURE COMMUNITYPILOT v1.2 WEBSITE UPDATE
+===========================================
+
+This folder is ready for GitHub Pages.
+
+Files to upload to the root of the venturecommunitypilot-site repository:
+
+  index.html
+  support.html
+  privacy.html
+  terms.html
+  styles.css
+  bot-icon.png
+  DESCRIPTION-COPY-v1.2.txt
+  UPLOAD-INSTRUCTIONS.txt
+
+After uploading:
+
+1. Commit the files to the repository's published branch.
+2. Wait for the GitHub Pages deployment to finish.
+3. Open the site in a private/incognito window:
+   https://viremontmoogle.github.io/venturecommunitypilot-site/
+4. Open the command guide and search for “platform”:
+   https://viremontmoogle.github.io/venturecommunitypilot-site/support.html
+5. Confirm that the page displays “Version 1.2” and lists Twitch, Kick,
+   YouTube, and TikTok.
+
+The description-copy file contains ready-to-paste text for the Discord App
+Directory, bot profile, GitHub repository, support server, social posts, and
+Twitch chat.
